@@ -11,10 +11,12 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
+    <>
     <footer
   className="relative text-white"
   style={{
@@ -24,7 +26,7 @@ export default function Footer() {
   }}
 >
   {/* Overlay */}
-  <div className="absolute inset-0 bg-[#08264A]/90"></div>
+  <div className="absolute inset-0  bg-[#08264A]/90"></div>
 
   <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
 
@@ -96,10 +98,14 @@ export default function Footer() {
 
     </div>
 </div>
-    {/* Bottom */}
-    <div className="mt-12 bg-[#2C3F5B] py-4 border-t border-white flex flex-col md:flex-row items-center justify-between gap-0">
+   
 
-      <p className="text-xs md:text-sm  text-center">
+  
+</footer>
+ {/* Bottom */}
+    <div className=" bg-[#2C3F5B]  px-8 pt-4  border-t border-white text-white flex flex-col md:flex-row items-center justify-between gap-0">
+
+      <p className="text-xs md:text-sm   text-center">
          © {currentYear} BHEEMA GROUP. All Rights Reserved.
       </p>
 
@@ -111,8 +117,17 @@ export default function Footer() {
       </div>
 
     </div>
-
-  
-</footer>
+    
+    <div className="bg-[#2C3F5B] px-8 py-2 text-[12px] text-yellow-600 flex flex-col md:flex-row items-center justify-left gap-8">
+  <Link href="/terms" className="hover:text-yellow-400 transition">
+    Terms & Conditions
+  </Link>
+  <Link href="/privacy" className="hover:text-yellow-400 transition">
+    Privacy Policy
+  </Link>
+</div>
+    
+   
+</>
   );
 }

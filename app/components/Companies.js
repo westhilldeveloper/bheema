@@ -23,7 +23,7 @@ export default function Companies() {
     {
       title: "BHIM SECURITY PVT. LTD.",
       image: "/images/cmpn_2.png",
-      logo: "/images/asset/logos/secure.png",
+      logo: "/images/asset/logos/Bhim.png",
       description:
         "Bhim Secure Solutions is a trusted workforce and facility management company committed to delivering dependable manpower and support services to businesses across diverse industries. Since its establishment in 2009, the company has built a reputation for professionalism, reliability, and service excellence by helping organizations streamline their day-to-day operations through customized workforce solutions.",
       url: "https://www.bhimsecuresolutions.com/",
@@ -31,7 +31,7 @@ export default function Companies() {
      {
       title: "SHAGUN FARM",
       image: "/images/cmpn_1.png",
-      logo: "/images/asset/logos/shagun_farm.png",
+      logo: "/images/asset/logos/Shagun_farm.png",
       description:
         "Shagun Farm is a premium event and hospitality destination designed to host unforgettable weddings, social celebrations, corporate events, and special occasions. Combining elegant venues, modern amenities, beautifully landscaped spaces, and exceptional hospitality, Shagun Farm provides the perfect setting for memorable experiences tailored to every celebration.",
       url: "#",
@@ -54,7 +54,7 @@ export default function Companies() {
     },
   ];
 
-  const truncateText = (text, maxLength = 300) => {
+  const truncateText = (text, maxLength = 500) => {
     if (text.length <= maxLength) return text;
     return text.slice(0, maxLength).trim() + "…";
   };
@@ -214,7 +214,7 @@ export default function Companies() {
 
                     {/* Description */}
                     <p className="text-gray-500 text-xs sm:text-sm md:text-[14px] leading-5 sm:leading-6 flex-1 min-h-[60px] sm:min-h-[70px] md:min-h-[90px]">
-                      {truncateText(company.description, 300)}
+                      {truncateText(company.description, 550)}
                     </p>
 
                     {/* Button – only show if URL is valid */}

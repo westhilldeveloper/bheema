@@ -52,7 +52,7 @@ export default function Footer() {
 
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   <Phone size={18} className="text-[#D9A441] flex-shrink-0" />
-                  <span>+91 12345 67890</span>
+                  <span>011-47083993</span>
                 </div>
 
                 <div className="flex items-center justify-center md:justify-start gap-3">
@@ -60,14 +60,11 @@ export default function Footer() {
                   <span>info@bheemagroup.com</span>
                 </div>
 
-                <div className="flex items-center justify-center md:justify-start gap-3">
-                  <Globe size={18} className="text-[#D9A441] flex-shrink-0" />
-                  <span>www.bheemagroup.com</span>
-                </div>
+                
 
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   <MapPin size={18} className="text-[#D9A441] flex-shrink-0" />
-                  <span>India</span>
+                  <span>6B, Atmaram House, Tolstoy Marg, Connaught Place, New Delhi - 110001, India</span>
                 </div>
 
               </div>
@@ -109,6 +106,17 @@ export default function Footer() {
           Privacy Policy
         </Link>
       </div>
+      <div className=" bg-[#2C3F5B] px-8 text-center text-xs text-gray-400 md:text-left">
+          Made by{' '}
+          <a
+            href="https://mysterioushero.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:underline"
+          >
+            Mysterious Hero
+          </a>
+        </div>
     </>
   );
 }

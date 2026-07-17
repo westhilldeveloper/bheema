@@ -10,7 +10,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 z-0">
     <Image
-      src="/images/hero.png"
+      src="/images/her.jpeg"
       alt="Hero Background"
       fill
       
@@ -41,10 +41,10 @@ export default function Hero() {
             relationships.
           </p>
 
-         <button className="bg-[#C8A34B] hover:bg-[#b8923a] text-black font-semibold px-8 py-3 rounded-md transition shadow-lg flex items-center gap-2">
+         {/* <button className="bg-[#C8A34B] hover:bg-[#b8923a] text-black font-semibold px-8 py-3 rounded-md transition shadow-lg flex items-center gap-2">
   KNOW MORE
   <ArrowRight size={18} />
-</button>
+</button> */}
         </div>
 
         {/* Right Image – Hidden on small screens, shown on lg+ */}

@@ -41,7 +41,7 @@ const features = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-[#0A2342] text-white py-12 sm:py-16 md:py-20">
+    <section id="whyus" className="bg-[#0A2342] text-white py-12 sm:py-16 md:py-20">
       <div className="max-w-8xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-10 md:mb-14">

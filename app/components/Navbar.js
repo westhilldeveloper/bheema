@@ -10,36 +10,45 @@ export default function Navbar() {
 
   const navItems = [
     { name: "HOME", link: "#home" },
-    { name: "ABOUT", link: "#about" },
-    { name: "COMPANIES", link: "#companies" },
+    { name: "OUR COMPANIES", link: "#companies" },
+    { name: "WHY US", link: "#whyus" },
+    { name: "ABOUT US", link: "#about" },
     { name: "INDUSTRIES", link: "#industries" },
     { name: "CONTACT US", link: "#contact" },
   ];
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-    if (sections.length === 0) return;
+  const sections = document.querySelectorAll("section[id]");
+  if (sections.length === 0) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.4, // adjust as needed
-        rootMargin: "0px 0px -10% 0px", // helps avoid switching too early/late
+  const navbar = document.querySelector("header");
+  const navbarHeight = navbar?.offsetHeight || 0;
+
+  const handleScroll = () => {
+    let currentSection = "";
+    const scrollPosition = window.scrollY + navbarHeight + 50; // 50px offset
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        currentSection = section.id;
       }
-    );
+    });
 
-    sections.forEach((section) => observer.observe(section));
+    if (currentSection) {
+      setActiveSection(currentSection);
+    }
+  };
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
-  }, []);
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // initial check
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   return (
     <header className="sticky top-0 z-50 bg-[#0A2342] text-white shadow-md">

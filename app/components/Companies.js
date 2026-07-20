@@ -44,14 +44,14 @@ export default function Companies() {
         "BS Café is a modern café and dining destination committed to serving high-quality food, refreshing beverages, and an exceptional customer experience. With a thoughtfully curated menu, inviting ambiance, and focus on freshness, the café creates the perfect space for casual dining, business meetings, family gatherings, and everyday moments. ",
       url: "#",
     },
-    {
-      title: "TIRUMALA",
-      image: "/images/cmpn_5.png",
-      logo: "/images/asset/logos/trimula__logo.png",
-      description:
-        "Tirumala Provision Pvt. Ltd. is a trusted retail and wholesale provider of quality grocery, food, and daily essential products, dedicated to meeting the everyday needs of households and businesses. The company offers a comprehensive range of branded and essential products while maintaining high standards of quality, affordability, and customer satisfaction.",
-      url: "#",
-    },
+    // {
+    //   title: "TIRUMALA",
+    //   image: "/images/cmpn_5.png",
+    //   logo: "/images/asset/logos/trimula__logo.png",
+    //   description:
+    //     "Tirumala Provision Pvt. Ltd. is a trusted retail and wholesale provider of quality grocery, food, and daily essential products, dedicated to meeting the everyday needs of households and businesses. The company offers a comprehensive range of branded and essential products while maintaining high standards of quality, affordability, and customer satisfaction.",
+    //   url: "#",
+    // },
   ];
 
   const truncateText = (text, maxLength = 500) => {

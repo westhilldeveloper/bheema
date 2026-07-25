@@ -32,7 +32,7 @@ export default function ClientsDetails() {
         <p className="mx-auto max-w-full text-center font-bold  text-[12px] leading-[1.35] text-[#4a4a4a] md:text-[14px]">
           Delivering Excellence for India's Leading Infrastructure Organizations
         </p>
-        <p className="mx-auto max-w-full text-centermy-12 text-[12px] leading-[1.35] text-[#4a4a4a] md:text-[14px]">
+        <p className="mx-auto max-w-full text-centermy-12 text-justify text-[12px] leading-[1.35] text-[#4a4a4a] md:text-[14px]">
           Our clients are at the core of everything we do at Bhim Secure Solutions. Over the years, we have built strong and lasting relationships with reputed organizations across infrastructure, construction, government, and private sectors. Our client portfolio reflects trust, reliability, and consistent service delivery, as we continue to support companies with tailored manpower solutions that meet their operational needs. We take pride in partnering with industry leaders and contributing to their success through our commitment to quality, professionalism, and long-term collaboration.
         </p>
 

@@ -109,7 +109,7 @@ export default function OngoingProjects() {
                       <h3 className="text-[18px] font-medium leading-tight text-black md:text-[28px]">
                         {slide.title}
                       </h3>
-                      <p className="mt-3 max-w-full text-[10px] leading-[1.4] text-[#555] md:text-[14px]">
+                      <p className="mt-3 max-w-full text-[10px] text-justify leading-[1.4] text-[#555] md:text-[14px]">
                         {slide.description1}
                       </p>
                     </div>

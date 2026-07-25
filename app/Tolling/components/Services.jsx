@@ -222,7 +222,7 @@ export default function Services() {
                     }}
                   >
                     {/* Description */}
-                    <p className="text-[14px] text-[#555] leading-6">
+                    <p className="text-[14px] text-[#555] text-justify leading-6">
                       {service.description}
                     </p>
 

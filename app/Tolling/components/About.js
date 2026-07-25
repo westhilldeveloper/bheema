@@ -54,7 +54,7 @@ export default function About() {
               OUR MISSION
             </h3>
 
-            <div className="space-y-4 sm:space-y-5 md:space-y-6">
+            <div className="space-y-4 sm:space-y-5 text-center sm:text-left md:space-y-6">
               {missionPoints.map((point, index) => (
                 <div
                   key={index}

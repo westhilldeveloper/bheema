@@ -20,7 +20,7 @@ const LeadershipCard = ({ service }) => (
     <p className="mt-0 text-[12px] leading-5 text-[#555] sm:text-[13px]">
       {service.designation}
     </p>
-    <p className="mt-4 text-[12px] leading-5 text-[#555] sm:text-[13px]">
+    <p className="mt-4 text-[12px] leading-5 text-justify md:text-center text-[#555] sm:text-[13px]">
       {service.description}
     </p>
   </div>

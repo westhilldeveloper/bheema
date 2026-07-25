@@ -89,12 +89,12 @@ export default function Footer() {
           © {currentYear} BHEEMA GROUP. All Rights Reserved.
         </p>
 
-        <div className="flex items-center gap-4 md:gap-5 text-base sm:text-lg">
+        {/* <div className="flex items-center gap-4 md:gap-5 text-base sm:text-lg">
           <FaFacebookF className="cursor-pointer hover:text-[#D9A441] transition-colors" />
           <FaLinkedinIn className="cursor-pointer hover:text-[#D9A441] transition-colors" />
           <FaInstagram className="cursor-pointer hover:text-[#D9A441] transition-colors" />
           <FaYoutube className="cursor-pointer hover:text-[#D9A441] transition-colors" />
-        </div>
+        </div> */}
       </div>
 
       {/* Terms & Privacy */}

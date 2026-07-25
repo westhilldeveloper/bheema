@@ -2,7 +2,7 @@ export default function ClientsDetails() {
   const clients = [
     "/clients/adani.png",
     "/clients/Ayushajay_Construction_Pvt._Ltd.png",
-    "/clients/Essel_infra.png",
+    "/clients/Essel_Infra.png",
     "/clients/Irrigation___Flood_Control_Department__Govt._of_Delhi.png",
     "/clients/KMC.png",
     "/clients/LNT.png",
@@ -11,7 +11,7 @@ export default function ClientsDetails() {
     "/clients/NHIT.png",
     "/clients/Pink_City_Expressway.png",
     "/clients/Sadbhav_Engineering.png",
-    "/clients/Welspun.png",
+    "/clients/welspun.png",
    
   ];
 
@@ -46,7 +46,7 @@ export default function ClientsDetails() {
               <img
                 src={logo}
                 alt="client logo"
-                className="max-h-[60px] w-auto max-w-full object-contain sm:max-h-[70px] md:max-h-[85px] lg:max-h-[100px] xl:max-h-[120px]"
+                className="h-full w-full object-contain p-1"
               />
             </div>
           ))}

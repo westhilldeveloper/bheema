@@ -55,13 +55,13 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-[#0A2342] text-white shadow-md">
       <div className="max-w-8xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex bg-white items-center">
           <Image
-            src="/images/Bheema_logo.png"
+            src="/images/trolling_logo.png"
             alt="Bheema Group Logo"
-            width={160}
-            height={160}
-            className="h-26 w-auto"
+            width={90}
+            height={80}
+            className="h-16 w-auto"
             priority
           />
         </div>

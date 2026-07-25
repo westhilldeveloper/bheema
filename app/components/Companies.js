@@ -18,8 +18,8 @@ export default function Companies() {
       description:
         "Bheema Tolling & Traffic Solution Pvt. Ltd. (BTTS) is a leading provider of integrated toll management, traffic control, security, and operational support services for highway and infrastructure projects across India. With over a decade of industry experience, BTTS has evolved from a toll operations company into a comprehensive solutions provider delivering toll management, lane operations, traffic control, security services, housekeeping, ambulance services, crane operations, and incident management support. ",
       url: "#",
+      knowMore: "/Tolling",
     },
-   
     {
       title: "BHIM SECURITY PVT. LTD.",
       image: "/images/cmpn_2.png",
@@ -28,7 +28,7 @@ export default function Companies() {
         "Bhim Secure Solutions is a trusted workforce and facility management company committed to delivering dependable manpower and support services to businesses across diverse industries. Since its establishment in 2009, the company has built a reputation for professionalism, reliability, and service excellence by helping organizations streamline their day-to-day operations through customized workforce solutions.",
       url: "https://www.bhimsecuresolutions.com/",
     },
-     {
+    {
       title: "SHAGUN FARM",
       image: "/images/cmpn_1.png",
       logo: "/images/asset/logos/Shagun_farm.png",
@@ -44,14 +44,6 @@ export default function Companies() {
         "BS Café is a modern café and dining destination committed to serving high-quality food, refreshing beverages, and an exceptional customer experience. With a thoughtfully curated menu, inviting ambiance, and focus on freshness, the café creates the perfect space for casual dining, business meetings, family gatherings, and everyday moments. ",
       url: "#",
     },
-    // {
-    //   title: "TIRUMALA",
-    //   image: "/images/cmpn_5.png",
-    //   logo: "/images/asset/logos/trimula__logo.png",
-    //   description:
-    //     "Tirumala Provision Pvt. Ltd. is a trusted retail and wholesale provider of quality grocery, food, and daily essential products, dedicated to meeting the everyday needs of households and businesses. The company offers a comprehensive range of branded and essential products while maintaining high standards of quality, affordability, and customer satisfaction.",
-    //   url: "#",
-    // },
   ];
 
   const truncateText = (text, maxLength = 500) => {
@@ -67,7 +59,6 @@ export default function Companies() {
     }
   };
 
-  // Check if URL is valid (not empty and not "#")
   const hasValidUrl = (url) => {
     return url && url !== "#" && url !== "javascript:void(0)" && url.trim() !== "";
   };
@@ -77,7 +68,7 @@ export default function Companies() {
     if (!scrollRef.current) return;
     const container = scrollRef.current;
     const cardWidth = container.querySelector(":first-child")?.offsetWidth || 300;
-    const gap = 16; // matches gap-4 (1rem = 16px)
+    const gap = 16;
     const scrollAmount = direction === "left" ? -(cardWidth + gap) : cardWidth + gap;
     container.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
@@ -93,11 +84,9 @@ export default function Companies() {
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
-
     const timer = setTimeout(updateButtons, 100);
     container.addEventListener("scroll", updateButtons);
     window.addEventListener("resize", updateButtons);
-
     return () => {
       clearTimeout(timer);
       container.removeEventListener("scroll", updateButtons);
@@ -122,9 +111,8 @@ export default function Companies() {
           </p>
         </div>
 
-        {/* Carousel Container with arrows */}
+        {/* Carousel */}
         <div className="relative">
-          {/* Left Arrow */}
           {showLeft && (
             <button
               onClick={() => scroll("left")}
@@ -148,7 +136,6 @@ export default function Companies() {
             </button>
           )}
 
-          {/* Right Arrow */}
           {showRight && (
             <button
               onClick={() => scroll("right")}
@@ -172,7 +159,6 @@ export default function Companies() {
             </button>
           )}
 
-          {/* Scrollable cards */}
           <div
             ref={scrollRef}
             className="flex flex-nowrap gap-4 overflow-x-auto scroll-smooth pb-4 pt-2 px-1 [&::-webkit-scrollbar]:hidden"
@@ -181,7 +167,6 @@ export default function Companies() {
               msOverflowStyle: "none",
             }}
           >
-            
             {companiess.map((company, index) => (
               <div
                 key={index}
@@ -201,7 +186,6 @@ export default function Companies() {
 
                   {/* Content */}
                   <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-1">
-                    {/* Logo */}
                     <div className="h-16 sm:h-14 md:h-16 flex items-center justify-center mb-2 sm:mb-3 md:mb-4">
                       <Image
                         src={company.logo}
@@ -212,13 +196,12 @@ export default function Companies() {
                       />
                     </div>
 
-                    {/* Description */}
                     <p className="text-gray-500 text-xs sm:text-sm md:text-[14px] leading-5 sm:leading-6 flex-1 min-h-[60px] sm:min-h-[70px] md:min-h-[90px]">
                       {truncateText(company.description, 550)}
                     </p>
 
-                    {/* Button – only show if URL is valid */}
-                    {hasValidUrl(company.url) && (
+                    {/* Button logic */}
+                    {hasValidUrl(company.url) ? (
                       <button
                         onClick={() => handleVisit(company.url)}
                         className="mt-3 sm:mt-4 md:mt-6 inline-flex items-center justify-center gap-2 w-full border border-[#0A2342] text-[#0A2342] rounded-full py-2.5 sm:py-3 text-xs sm:text-sm font-medium hover:bg-[#0A2342] hover:text-white transition cursor-pointer"
@@ -226,7 +209,15 @@ export default function Companies() {
                         Visit Website
                         <span>→</span>
                       </button>
-                    )}
+                    ) : company.knowMore ? (
+                      <button
+                        onClick={() => window.open(company.knowMore, "_blank")}
+                        className="mt-3 sm:mt-4 md:mt-6 inline-flex items-center justify-center gap-2 w-full border border-[#0A2342] text-[#0A2342] rounded-full py-2.5 sm:py-3 text-xs sm:text-sm font-medium hover:bg-[#0A2342] hover:text-white transition cursor-pointer"
+                      >
+                        Know More
+                        <span>→</span>
+                      </button>
+                    ) : null}
                   </div>
                 </div>
               </div>

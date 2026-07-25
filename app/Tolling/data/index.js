@@ -1,0 +1,140 @@
+// import Services from "@/components/Services";
+export const navItems = ["Home", "About", "Services", "Projects", "Clients", "Contact"];
+
+export const services = [1, 2, 3];
+export const processItems = [
+  {
+    title: "Requirement Understanding",
+    description: "We analyze your exact workforce and service needs to ensure the right fit.",
+    image:'/images/circle/requirement.png'
+  },
+  {
+    title: "Talent Selection",
+    description: "We source, screen, and deploy skilled and reliable professionals.",
+    image:'/images/circle/talent.png'
+  },
+  {
+    title: "Training & Deployment",
+    description: "Our team is trained and quickly deployed for seamless operations.",
+    image:'/images/circle/trainning.png'
+  },
+  {
+    title: "Ongoing Support",
+    description: "We provide continuous supervision and support to maintain service quality.",
+    image:'/images/circle/Ongoing.png'
+  },
+];
+
+export const whychooseItems = [
+  {
+    title: "Experienced & Trusted Since 2009",
+    description: "With years of proven experience, we have developed a deep understanding of various industries and their workforce requirements. Our long-standing presence reflects our commitment to consistency, reliability, and client satisfaction.",
+    image:'/images/circle/wch4.png'
+  },
+  {
+    title: "Skilled & Verified Workforce",
+    description: "We ensure that every individual we deploy is properly trained, verified, and aligned with job requirements. This helps maintain high standards of service quality and ensures smooth operations for our clients.",
+    image:'/images/circle/wche3.png'
+  },
+  {
+    title: "Comprehensive Service Offering",
+    description: "From housekeeping and security to construction labour and healthcare support, we provide a wide range of services under one roof. This makes us a one-stop solution for all your manpower and facility needs.",
+    image:'/images/circle/wchse2.png'
+  },
+  {
+    title: "Client-Centric Approach",
+    description: "We prioritize our clients’ needs and tailor our services accordingly. Our team works closely with you to understand your requirements and deliver solutions that are efficient, flexible, and result-driven.",
+    image:'/images/circle/wchse1.png'
+  },
+];
+
+export const testimonials = [1, 2, 3];
+
+export const heroBg = "/images/homeImg.png";
+export const heroPeople = [
+  "/images/hm_per1.png",
+  "/images/hm_pr2.png",
+  "/images/hm_pr3.png",
+];
+
+export const aboutImages = [
+  "/images/ab_1.png",
+  "/images/ab_2.png",
+  "/images/ab_3.png",
+  "/images/ab_4.png",
+];
+
+export const serviceImg = "/images/serv_1.png";
+export const projectLarge = "/images/prj_1.png";
+export const projectSmall = "/images/prj_2.png";
+export const stripImages = [
+  "/gallery/1.jpeg",
+  "/gallery/2.jpeg",
+  "/gallery/3.jpeg",
+  "/gallery/4.jpeg",
+  "/gallery/5.jpeg",
+];
+
+const servicesData = [
+  // Slide 1 – three services
+  [
+    {
+      image: "/images/service/housekeeping.png",
+      title: "Corporate Housekeeping Services",
+      description: "We provide professional housekeeping staff to maintain cleanliness, hygiene, and a well-organized environment in corporate spaces, ensuring a positive and productive workplace for employees and visitors."
+    },
+    {
+      image: "/images/service/construction_2.png",
+      title: "Construction Manpower / Labour Supply",
+      description: "Our skilled and unskilled workforce supports construction projects of all sizes, helping ensure timely completion, operational efficiency, and adherence to industry standards."
+    },
+    {
+      image: "/images/service/security.png",
+      title: "Security Services",
+      description: "We offer trained security personnel to safeguard your premises, assets, and people, ensuring round-the-clock safety with professionalism and vigilance."
+    }
+  ],
+  
+  // Slide 2 – another three services
+  [
+    {
+      image: "/images/service/Pantrystaff.png",
+      title: "Pantry Services",
+      description: "Our pantry staff efficiently manage food and beverage services, maintaining hygiene and timely service to enhance workplace comfort and convenience."
+    },
+    {
+      image: "/images/service/helper_2.png",
+      title: "Helper Services",
+      description: "We provide reliable helpers to assist in daily operational tasks across various industries, improving efficiency and reducing workload on core teams."
+    },
+    {
+      image: "/images/service/packer.png",
+      title: "Packer & Picker Services",
+      description: "Our packers and pickers ensure accurate handling, packing, and movement of goods, making warehouse and logistics operations smooth and efficient."
+    }
+  ],
+  [
+    {
+      image: "/images/service/Nursing.png",
+      title: "Nursing Assistant Services",
+      description: "We offer trained nursing assistants to support patient care, assisting with daily medical needs and ensuring comfort and proper attention in healthcare settings."
+    },
+    {
+      image: "/images/service/Doctor.png",
+      title: "Doctor Attendant Services",
+      description: "Our doctor attendants provide essential support to medical professionals, helping manage patient coordination and routine assistance for smooth healthcare operations."
+    },
+    // {
+    //   image: "/images/pantry.jpg",
+    //   title: "Pantry Services",
+    //   description: "Pantry helpers, cafeteria staff, and support for corporate offices."
+    // }
+  ]
+];
+
+
+
+// export default function ServicesPage() {
+//   return <Services slides={servicesData} />;
+// }
+

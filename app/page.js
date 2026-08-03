@@ -16,7 +16,6 @@ export default function Home() {
       <Companies />
       <WhyUs />
       <About />
-      {/* <VisionMission /> */}
       <Industries />
       <Contact />
       <Footer />

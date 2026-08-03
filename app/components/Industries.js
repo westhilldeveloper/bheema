@@ -52,7 +52,7 @@ export default function Industries() {
         alt={item.title}
         width={48}
         height={48}
-        className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-auto object-contain"
+        className="w-8 h-auto sm:w-10 sm:h-10 md:w-14 md:h-auto object-contain"
       />
     </div>
   </div>

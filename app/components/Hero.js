@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Hero() {
   const images = [
-    "/images/her.jpeg",
+    "/images/hero.png",
     "/images/hero_2.jpeg",
     "/images/hero_3.jpeg",
     "/images/hero_4.jpeg",

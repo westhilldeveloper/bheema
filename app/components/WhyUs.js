@@ -35,7 +35,7 @@ const features = [
   },
   {
     icon: "/images/asset/ISO_9001_2015_Certified_Organization-png.png",
-    title: "ISO 9001 2015 Certified Organization",
+    title: "ISO 9001 2015 Certified \nOrganization",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function WhyUs() {
                   alt={item.title}
                   width={60}
                   height={74}
-                  className="w-auto h-full object-contain"
+                  className="w-auto h-14 object-contain"
                 />
               </div>
 

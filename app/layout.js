@@ -16,8 +16,8 @@ export const metadata = {
   description: "Building Trust, Delivering Excellence Across Industries",
   icons: {
     icon: [
-      { url: "/bhm_lg.png", sizes: "32x32", type: "image/png" },
-      { url: "/bhm_logo64.png", sizes: "64x64", type: "image/png" },
+      { url: "/lg64.png", sizes: "32x32", type: "image/png" },
+      { url: "/lg32.png", sizes: "64x64", type: "image/png" },
     ],
   },
 };

@@ -17,7 +17,7 @@ export default function Companies() {
       logo: "/images/asset/logos/trolling.png",
       description:
         "Bheema Tolling & Traffic Solution Pvt. Ltd. (BTTS) is a leading provider of integrated toll management, traffic control, security, and operational support services for highway and infrastructure projects across India. With over a decade of industry experience, BTTS has evolved from a toll operations company into a comprehensive solutions provider delivering toll management, lane operations, traffic control, security services, housekeeping, ambulance services, crane operations, and incident management support. ",
-      url: "https://master.d3shxb6pizlr3m.amplifyapp.com/",
+      url: "https://tolling.bheemagroup.com",
     },
     {
       title: "BHIM SECURITY PVT. LTD.",

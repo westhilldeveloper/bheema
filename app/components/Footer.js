@@ -15,6 +15,17 @@ import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  // Quick links – matching the navbar items (single‑page hash links)
+  const quickLinks = [
+    { name: "HOME", href: "#home" },
+    { name: "OUR COMPANIES", href: "#companies" },
+    { name: "WHY US", href: "#whyus" },
+    { name: "ABOUT US", href: "#about" },
+    { name: "INDUSTRIES", href: "#industries" },
+    { name: "CONTACT US", href: "#contact" },
+  ];
+
   return (
     <>
       <footer
@@ -29,10 +40,10 @@ export default function Footer() {
         <div className="absolute inset-0 bg-[#08264A]/90"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-8 md:py-12 lg:py-16">
-          {/* Main Footer */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 items-center">
+          {/* Main Footer – now 4 columns on lg */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 items-start">
 
-            {/* Left - Company Name */}
+            {/* Left – Company Name */}
             <div className="text-center md:text-left order-1">
               <h2 className="text-2xl sm:text-3xl md:text-[28px] lg:text-[32px] font-bold mb-2 md:mb-4">
                 BHEEMA GROUP
@@ -42,14 +53,13 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Center - Contact Us */}
-            <div className="text-center md:text-left order-3 md:order-2 lg:pl-8 xl:pl-12">
+            {/* Contact Us */}
+            <div className="text-center md:text-left order-3 md:order-2">
               <h3 className="text-[#D9A441] text-lg sm:text-xl md:text-[20px] font-bold uppercase mb-4 md:mb-6">
                 Contact Us
               </h3>
 
               <div className="space-y-3 md:space-y-4 text-[13px] sm:text-[14px]">
-
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   <Phone size={18} className="text-[#D9A441] flex-shrink-0" />
                   <span>011-47083993</span>
@@ -60,18 +70,34 @@ export default function Footer() {
                   <span>info@bheemagroup.com</span>
                 </div>
 
-                
-
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   <MapPin size={18} className="text-[#D9A441] flex-shrink-0" />
                   <span>6B, Atmaram House, Tolstoy Marg, Connaught Place, New Delhi - 110001, India</span>
                 </div>
-
               </div>
             </div>
 
-            {/* Right - Logo */}
-            <div className="flex justify-center md:justify-end order-2 md:order-3">
+            {/* NEW – Quick Links */}
+            <div className="text-center md:text-left order-4 md:order-3">
+              <h3 className="text-[#D9A441] text-lg sm:text-xl md:text-[20px] font-bold uppercase mb-4 md:mb-6">
+                Quick Links
+              </h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-[13px] sm:text-[14px]">
+                {quickLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="hover:text-[#D9A441] transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Logo */}
+            <div className="flex justify-center md:justify-end order-2 md:order-4">
               <img
                 src="/images/Bheema_logo.png"
                 alt="Bheema Group"
@@ -89,6 +115,7 @@ export default function Footer() {
           © {currentYear} BHEEMA GROUP. All Rights Reserved.
         </p>
 
+        {/* Social icons (commented out, uncomment if needed) */}
         {/* <div className="flex items-center gap-4 md:gap-5 text-base sm:text-lg">
           <FaFacebookF className="cursor-pointer hover:text-[#D9A441] transition-colors" />
           <FaLinkedinIn className="cursor-pointer hover:text-[#D9A441] transition-colors" />
@@ -106,17 +133,18 @@ export default function Footer() {
           Privacy Policy
         </Link>
       </div>
-      <div className=" bg-[#2C3F5B] px-8 text-center text-xs text-gray-400 md:text-left">
-          Made by{' '}
-          <a
-            href="https://mysterioushero.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-yellow-400 hover:underline"
-          >
-            Mysterious Hero
-          </a>
-        </div>
+
+      <div className="bg-[#2C3F5B] px-8 text-center text-xs text-gray-400 md:text-left">
+        Made by{' '}
+        <a
+          href="https://mysterioushero.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-yellow-400 hover:underline"
+        >
+          Mysterious Hero
+        </a>
+      </div>
     </>
   );
 }

@@ -6,11 +6,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Hero() {
   const images = [
-    "/images/hero.png",
-    "/images/hero_2.jpeg",
-    "/images/hero_3.jpeg",
-    "/images/hero_4.jpeg",
-    "/images/hero_5.jpeg",
+    "/images/h3.jpeg",
+    "/images/h1.jpeg",
+    "/images/h2.jpeg",
+    "/images/h5.jpeg",
+    "/images/h4.jpeg",
+    "/images/h6.jpeg",
+    "/images/h7.jpeg",
+    "/images/h8.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

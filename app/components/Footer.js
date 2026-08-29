@@ -134,7 +134,7 @@ export default function Footer() {
         </Link>
       </div>
 
-      <div className="bg-[#2C3F5B] px-8 text-center text-xs text-gray-400 md:text-left">
+      <div className="bg-[#2C3F5B] px-8 pb-20 md:pb-2 text-center text-xs text-gray-400 md:text-left">
         Made by{' '}
         <a
           href="https://mysterioushero.com/"

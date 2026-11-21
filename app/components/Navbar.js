@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -16,10 +17,9 @@ export default function Navbar() {
     { name: "CONTACT US", link: "#contact", icon: Phone },
   ];
 
-  // Scroll‑spy
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
-    if (sections.length === 0) return;
+    if (!sections.length) return;
 
     const navbar = document.querySelector("header");
     const navbarHeight = navbar?.offsetHeight || 0;
@@ -32,7 +32,10 @@ export default function Navbar() {
         const sectionTop = section.offsetTop;
         const sectionBottom = sectionTop + section.offsetHeight;
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionBottom
+        ) {
           currentSection = section.id;
         }
       });
@@ -52,10 +55,9 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ----- TOP HEADER (logo only on mobile, full nav on desktop) ----- */}
+      {/* Desktop Header */}
       <header className="sticky top-0 z-50 bg-[#0A2342] text-white shadow-md">
         <div className="max-w-8xl mx-auto px-6 h-20 flex items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center">
             <Image
               src="/images/Bheema_logo.png"
@@ -67,17 +69,19 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8 text-[13px] font-medium">
               {navItems.map((item) => {
                 const isActive = activeSection === item.link.slice(1);
+
                 return (
                   <li key={item.name}>
                     <a
                       href={item.link}
                       className={`transition-colors duration-300 ${
-                        isActive ? "text-[#D9A441]" : "hover:text-[#D9A441]"
+                        isActive
+                          ? "text-[#D9A441]"
+                          : "hover:text-[#D9A441]"
                       }`}
                     >
                       {item.name}
@@ -90,21 +94,25 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* ----- MOBILE BOTTOM NAVIGATION (fixed at bottom) ----- */}
+      {/* Mobile Bottom Navigation */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0A2342] border-t border-white/10 shadow-lg">
         <ul className="flex items-center justify-around h-16 px-2">
           {navItems.map((item) => {
             const isActive = activeSection === item.link.slice(1);
             const Icon = item.icon;
+
             return (
               <li key={item.name} className="flex-1">
                 <a
                   href={item.link}
                   className={`flex flex-col items-center justify-center gap-0.5 py-1 transition-colors ${
-                    isActive ? "text-[#D9A441]" : "text-white/70 hover:text-white"
+                    isActive
+                      ? "text-[#D9A441]"
+                      : "text-white/70 hover:text-white"
                   }`}
                 >
                   <Icon size={22} className="shrink-0" />
+
                   <span className="text-[10px] font-medium leading-tight">
                     {item.name === "OUR COMPANIES"
                       ? "Companies"
@@ -118,15 +126,6 @@ export default function Navbar() {
           })}
         </ul>
       </nav>
-
-      {/* Add bottom padding to page content on mobile so it doesn't hide behind the nav */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          body {
-            padding-bottom: 4rem; /* 64px – height of bottom nav */
-          }
-        }
-      `}</style>
     </>
   );
 }

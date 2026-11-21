@@ -94,7 +94,7 @@ export default function Companies() {
   }, []);
 
   return (
-    <section id="companies" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#f7f7f7]">
+    <section id="companies" className="py-12 sm:py-8 md:py-4 lg:py-12 bg-[#f7f7f7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-10 md:mb-14">
